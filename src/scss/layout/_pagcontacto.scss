@@ -1,0 +1,112 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+picture{
+     position: absolute;
+}
+
+.formulario{
+     position: relative;
+     width: 80%;
+     margin: auto;
+     margin-top: 50rem;
+     background-color: v.$blanco;
+     padding: 2rem;
+     margin-bottom: 5rem;
+
+     fieldset{
+     background-color: v.$blanco;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          width: 80%;
+          margin: auto;
+          padding: 2rem;
+     }
+     label{
+          width:100%;
+          margin-top: 2rem;
+     }
+     input, textarea{
+          width: 100%;
+          margin-bottom: 2rem;
+          padding: 1rem;
+          border: solid v.$gris .5px;
+          border-radius: 20px;
+          resize: none;
+     }
+     #opciones{
+          background-color: v.$gris;
+          color: v.$verde;
+          width: 100%;
+          border-radius: 20px;
+          padding: 1rem;
+     }
+     .btn_contacto{
+          margin-top: 5rem;
+     }
+
+     .contactar-forma{
+          display: flex;
+          align-items: center;
+          width: 50%;
+          label{
+               margin: 0;     
+          }
+          #contactar-telefono, #contactar-Email{
+               margin: auto;
+          }
+          text-align: center;
+          justify-content: space-around;
+     }
+}
+
+.formulario-crear{
+     padding: 5rem;
+     
+}
+
+
+@include m.tablet{
+     .formulario{
+          width: 80%;
+          margin-top: 15rem;
+          padding: 1rem;
+          margin-bottom: 5rem;
+     
+          fieldset{
+               width: 90%;
+               padding: 2rem;
+               margin: 2rem;
+          }
+
+     }
+}
+
+@include m.desktop{
+     .formulario{
+          width: 90%;
+          margin-top: 20rem;
+          padding: 1rem;
+          margin-bottom: 5rem;
+          border-radius: 20px;
+          fieldset{
+               border: solid v.$gris .5px;
+               border-radius: 20px;
+               width: 90%;
+               padding: 2rem;
+               margin: auto;
+          }
+
+          #opciones{
+               background-color: v.$gris;
+               color: v.$verde;
+               width: 100%;
+               border: solid v.$gris .5px;
+               border-radius: 20px;
+               padding: 1.2rem;
+          }
+
+     }
+}

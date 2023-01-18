@@ -1,0 +1,61 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.contactanos{
+     margin-top: v.$separacion;
+     height: 40rem;
+     background-image: url(../img/encuentra.jpg);
+     width: 100%;
+     background-position: center;
+     background-size: 100%;
+}
+
+
+.contactanos-texto{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     flex-direction: column;
+     position: relative;
+
+     p,h2{
+          color: v.$blanco;
+          margin: 3rem;
+     }
+     button{
+          width:30%;
+     }
+
+}
+
+@include m.tablet{
+     .contactanos{
+          height: 100%;
+          width: 100%;
+          background-image: url(../img/encuentra.jpg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100%;
+          background-size: cover;
+     }
+     
+     
+     .contactanos-texto{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: column;
+          position: relative;
+     
+          p,h2{
+               color: v.$blanco;
+               margin: 3rem;
+               text-align: center;
+          }
+          button{
+               margin-bottom: 5rem;
+               width:90%;
+          }
+     
+     }
+}

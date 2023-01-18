@@ -1,0 +1,122 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.departamentos-casas{
+     width: 70%;
+     height: 100%;
+     margin: auto;
+}
+
+.departamentos-casas_box{
+     
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     margin-bottom: v.$separacion;
+     gap: v.$separacion;
+     transition: 1s ;
+     .departamento-casas_completo:hover{
+          transform: scale(.9);
+          h3, h4, p, .departamento-icono img{
+               color: v.$amarillo;
+          }
+          
+     }
+}
+
+.departamento-casas_completo{
+     h3{
+          font-weight: bold;
+     }
+     width: 100%;
+     border: solid gray .1px;
+     padding: 2rem;
+}
+
+.departamento-icono{
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     gap: v.$separacion;
+     img{
+          width: 100%;
+     }
+
+}
+
+.departamento-texto{
+     text-align: center;
+}
+
+.departamento-icono-dormitorio , .departamento-icono-baño, .departamento-icono-estacionamiento{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     p{
+          color: v.$verde;
+     }
+}
+
+button{
+     cursor: pointer;
+}
+
+
+@include m.desktop{
+     .departamentos-casas{
+          width: 90%;
+          margin: auto;
+     }
+
+     .departamentos-casas_box{          
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          align-items: center;
+     }
+
+}
+@include m.tablet{
+     .departamentos-casas{
+          width: 90%;
+          margin: auto;
+     }
+
+     .departamentos-casas_box{          
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+     }
+     
+     .departamento-casas_completo{
+          h3{
+               font-weight: bold;
+          }
+          width: 100%;
+          border: solid gray .1px;
+          padding: 2rem;
+     }
+     
+     .departamento-icono{
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          gap: v.$separacion;
+          img{
+               width: 100%;
+          }
+     
+     }
+     
+     .departamento-texto{
+          text-align: center;
+     }
+     
+     .departamento-icono-dormitorio , .departamento-icono-baño, .departamento-icono-estacionamiento{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          p{
+               color: v.$verde;
+          }
+     }
+     
+}

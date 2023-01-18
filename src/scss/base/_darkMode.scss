@@ -1,0 +1,35 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+
+.darkMode{
+     transition: 1s ease-in;
+     background-color: darken($grisOscuro, 5);
+     p, h1,h2,h3,h4,h5{
+          color: v.$blanco;
+     }
+     .departamento-icono img{
+          filter: invert(1);
+     }
+
+     .formulario, input, label, textarea{
+          background-color: v.$grisOscuro;
+     }
+     input, label, textarea,  fieldset{
+          color: v.$amarillo;
+     }
+     
+
+     .formulario fieldset{
+          background-color: v.$grisOscuro;
+
+     }
+     
+     .icono:hover{
+          background-color: v.$gris;
+          transition: 1 ease-in;
+          p{
+               filter: invert(1);
+
+          }
+     }
+}
